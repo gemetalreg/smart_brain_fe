@@ -75,7 +75,7 @@ class App extends React.Component {
     // of the image we want as an input. Change these strings to run your own example.
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
-    fetch('smart-brain-be.onrender.com:10000/imageapi', {
+    fetch('https://smart-brain-be.onrender.com:10000/imageapi', {
       method: 'post',
       headers: {
           'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ class App extends React.Component {
     .then(response => response.json())
     .then(result => {
       if (result) {
-        fetch("smart-brain-be.onrender.com:10000/image", {
+        fetch("https://smart-brain-be.onrender.com:10000/image", {
           method: 'put',
           headers: {
               'Content-Type': 'application/json'
